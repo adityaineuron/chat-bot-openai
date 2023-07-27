@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Support Chatbot</title>
+</head>
+<body>
+
+    <form method="POST" action="/chat">
+        <label for="query">Your Prompt:</label>
+        <input type="text" name="query" id="query" required>
+        <input type="submit" value="Ask">
+    </form>
+    {% if response %}
+    <div>
+ 
+        <p><b>Query: </b> {{ query }}</p>
+        <p> <b> Response: </b> {{ response }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
